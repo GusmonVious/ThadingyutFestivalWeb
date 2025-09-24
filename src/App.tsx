@@ -107,9 +107,9 @@ function App() {
             loop 
             playsInline
             className="w-full h-full object-cover opacity-50"
-            poster="https://images.pexels.com/photos/8092966/pexels-photo-8092966.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            poster="/heroBG.mp4"
           >
-            <source src="/path-to-your-video.mp4" type="video/mp4" />
+            <source src="/heroBG.mp4" type="video/mp4" />
             {/* Fallback image if video fails to load */}
             <img 
               src="https://images.pexels.com/photos/8092966/pexels-photo-8092966.jpeg?auto=compress&cs=tinysrgb&w=1920" 
@@ -131,7 +131,7 @@ function App() {
               Festival of Lights
             </p>
             <p className="text-lg text-amber-100 mb-12 font-medium tracking-wide">
-              မီးတိုင်းပွဲတော် • The Sacred Illumination
+              မီးထွန်းပွဲတော် • The Sacred Illumination
             </p>
             <p className="text-lg text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
               Celebrating Buddha's descent from Tavatimsa Heaven, illuminating hearts and homes across Myanmar with the divine light of wisdom, compassion, and eternal peace.
