@@ -38,10 +38,10 @@ function App() {
   };
 
   const timelineEvents = [
-    { title: "Day 1", description: "Lighting of Lamps", icon: "🏮" },
-    { title: "Day 2", description: "Cultural Performances", icon: "🎭" },
-    { title: "Day 3", description: "Merit Making", icon: "🙏" },
-    { title: "Final Day", description: "Grand Celebration", icon: "✨" }
+    { title: "Day 1", description: "This day is all about preparation and anticipation. Homes, streets, and public buildings throughout Myanmar are decorated with an array of lights, including colorful electric bulbs, candles, and traditional lanterns. ", icon: "🏮" },
+    { title: "Day 2", description: "This is the most significant and spiritually important day of the festival, as it is the exact day the Buddha is believed to have descended from heaven. The most cherished tradition is the act of honoring elders.", icon: "🎭" },
+    { title: "Day 3", description: "The festive spirit continues on the final day, though often with a slightly more relaxed pace. The bright lights and bustling street fairs remain active, providing more opportunities for people to socialize and celebrate.", icon: "🙏" },
+    { title: "Final Day", description:"While not an official part of the religious calendar, the large-scale public entertainment—the free shows, music concerts, plays, and especially the street fairs and markets", icon: "✨" }
   ];
 
   return (
@@ -107,9 +107,9 @@ function App() {
             loop 
             playsInline
             className="w-full h-full object-cover opacity-50"
-            poster="/heroBG.mp4"
+            poster="/heroBG-Picward.mp4"
           >
-            <source src="/heroBG.mp4" type="video/mp4" />
+            <source src="/heroBG-Picwand.mp4" type="video/mp4" />
             {/* Fallback image if video fails to load */}
             <img 
               src="https://images.pexels.com/photos/8092966/pexels-photo-8092966.jpeg?auto=compress&cs=tinysrgb&w=1920" 
