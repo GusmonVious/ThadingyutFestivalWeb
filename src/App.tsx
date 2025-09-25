@@ -39,9 +39,9 @@ function App() {
 
   const timelineEvents = [
     { title: "Day 1", description: "This day is all about preparation and anticipation. Homes, streets, and public buildings throughout Myanmar are decorated with an array of lights, including colorful electric bulbs, candles, and traditional lanterns. ", icon: "🏮" },
-    { title: "Day 2", description: "This is the most significant and spiritually important day of the festival, as it is the exact day the Buddha is believed to have descended from heaven. The most cherished tradition is the act of honoring elders.", icon: "🎭" },
-    { title: "Day 3", description: "The festive spirit continues on the final day, though often with a slightly more relaxed pace. The bright lights and bustling street fairs remain active, providing more opportunities for people to socialize and celebrate.", icon: "🙏" },
-    { title: "Final Day", description:"While not an official part of the religious calendar, the large-scale public entertainment—the free shows, music concerts, plays, and especially the street fairs and markets", icon: "✨" }
+    { title: "Day 2", description: "This is the most significant and spiritually important day of the festival, as it is the exact day the Buddha is believed to have descended from heaven. Additionally more so, because the most cherished tradition is the act of honoring elders.", icon: "🙏" },
+    { title: "Day 3", description: "The festive spirit continues onto the final day, though often with a slightly more relaxed pace. The bright lights and bustling street fairs remain active, creating more opportunities for people to come together and celebrate.", icon: "🎉" },
+    { title: "Final Day", description:"While not an official part of the religious calendar, the large-scale public entertainment, the free shows, music concerts, plays, and especially the street fairs and markets are open on this extended day.", icon: "✨" }
   ];
 
   return (
@@ -52,9 +52,14 @@ function App() {
       }`}>
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
-              Thadingyut
+            <div className="flex items-center gap-3">
+              <img src="/logo.png" alt="Logo" className='w-auto h-6'/>
+              |
+              <div className="text-2xl font-bold font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
+                Thadingyut
+              </div>
             </div>
+
             
             <div className="hidden md:flex space-x-8">
               {['Home', 'About', 'Timeline', 'Traditions', 'Gallery', 'Events'].map((item) => (
@@ -188,11 +193,11 @@ function App() {
                   <h3 className="text-xl font-semibold text-white font-playfair">Festival of Lights</h3>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  For three sacred days, Myanmar transforms into a constellation of light. Millions of candles, oil lamps, and colorful lanterns create a breathtaking celestial display that honors Buddha's divine wisdom and eternal teachings.
+                  For three scared days, Myanmar turns into a constellation of light. Millions of candles, oil lamps, and colorful lanterns light up a breathtaking celestial display to honor Buddha's divine wisdom and eternal teachings.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-8 card-hover golden-glow">
+              <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-8 card-hover golden-glow"> 
                 <div className="flex items-center mb-6">
                   <div className="w-10 h-10 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-full flex items-center justify-center mr-3">
                     <Calendar className="text-white" size={20} />
@@ -200,7 +205,7 @@ function App() {
                   <h3 className="text-xl font-semibold text-white font-playfair">Sacred Timing</h3>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  Celebrated on the full moon day of Thadingyut (usually October), this auspicious time marks the end of the three-month Buddhist retreat season and the beginning of the cool season, symbolizing spiritual renewal.
+                  Celebrated on the full moon day of Thadingyut (usually October), this auspicious time marks the end of the three-month Buddhist retreat season and the beginning of the cool season, also symbolizing spiritual renewal.
                 </p>
               </div>
             </div>
@@ -208,7 +213,7 @@ function App() {
             <div className="relative">
               <div className="gallery-image overflow-hidden">
                 <img 
-                  src="https://images.pexels.com/photos/8159657/pexels-photo-8159657.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                  src="/photos/photo_2025-09-25_18-48-25.jpg" 
                   alt="Traditional Myanmar pagoda illuminated during Thadingyut festival"
                   className="w-full h-[400px] object-cover"
                 />
@@ -276,13 +281,13 @@ function App() {
             {[
               {
                 title: "Lighting Ceremonies",
-                description: "Homes, temples, and pagodas glow with countless oil lamps and candles, symbolizing the dispelling of darkness and ignorance from the human heart.",
+                description: "Homes, temples, and pagodas glow with countless oil lamps and candles, symbolizing dispelling darkness and ignorance from the human heart.",
                 icon: "🕯️",
                 gradient: "from-amber-500 to-yellow-600"
               },
               {
                 title: "Weaving Competitions",
-                description: "Communities gather to weave beautiful Kathina robes for monks, celebrating craftsmanship, devotion, and the spirit of giving.",
+                description: "People gather to weave beautiful Kathina robes for monks, celebrating craftsmanship, devotion, and the spirit of giving.",
                 icon: "🧵",
                 gradient: "from-yellow-500 to-amber-600"
               },
@@ -294,7 +299,7 @@ function App() {
               },
               {
                 title: "Cultural Performances",
-                description: "Traditional dances, music, and theatrical performances bring ancient stories and legends to life with vibrant artistry.",
+                description: "Traditional dances, music, and theatrical performances bringing ancient stories and legends to life with vibrant artistry.",
                 icon: "🎭",
                 gradient: "from-yellow-600 to-amber-500"
               },
@@ -306,7 +311,7 @@ function App() {
               },
               {
                 title: "Family Gatherings",
-                description: "Relatives unite to share traditional foods, exchange blessings, and strengthen bonds across generations in joyful celebration.",
+                description: "Families unite, sharing traditional foods, exchanging blessing, and strengthening bonds across generations in joyful celebration.",
                 icon: "👨‍👩‍👧‍👦",
                 gradient: "from-orange-500 to-amber-600"
               }
@@ -364,10 +369,10 @@ function App() {
               </div>
               <div className="space-y-6">
                 {[
-                  { title: "School Lighting Ceremony", date: "Coming Soon • 7:00 PM", location: "School Auditorium", icon: "🏮" },
-                  { title: "Student Cultural Show", date: "Coming Soon • 6:00 PM", location: "Main Hall", icon: "🎭" },
-                  { title: "Lantern Making Workshop", date: "Coming Soon • 2:00 PM", location: "Art Room", icon: "🎨" },
-                  { title: "Merit Making Activity", date: "Coming Soon • 9:00 AM", location: "School Grounds", icon: "🙏" }
+                  { title: "School Lighting Ceremony", date: "Coming Soon • -- PM", location: "School Auditorium", icon: "🏮" },
+                  { title: "Student Cultural Show", date: "Coming Soon • -- PM", location: "Main Hall", icon: "🎭" },
+                  { title: "Lantern Making Workshop", date: "Coming Soon • -- PM", location: "Art Room", icon: "🎨" },
+                  { title: "Merit Making Activity", date: "Coming Soon • -- AM", location: "School Grounds", icon: "🙏" }
                 ].map((event, index) => (
                   <div key={index} className="flex items-center p-4 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors duration-300">
                     <div className="text-2xl mr-3">{event.icon}</div>
@@ -446,7 +451,7 @@ function App() {
           
           <div className="border-t border-amber-500/20 pt-8">
             <p className="text-gray-500 text-sm">
-              © 2024 School Thadingyut Celebration • Honoring Myanmar's Sacred Festival of Lights
+              © 2025 School Thadingyut Celebration • Honoring Myanmar's Sacred Festival of Lights
             </p>
           </div>
         </div>
