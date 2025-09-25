@@ -13,16 +13,16 @@ export const Gallery: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<'all' | 'traditional' | 'school'>('all');
 
   const images: GalleryImage[] = [
-    { src: "https://images.pexels.com/photos/9978463/pexels-photo-9978463.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Golden pagoda illuminated with thousands of candles", category: 'traditional' },
-    { src: "https://images.pexels.com/photos/8092966/pexels-photo-8092966.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Buddhist temple with traditional lanterns", category: 'traditional' },
-    { src: "https://images.pexels.com/photos/8159657/pexels-photo-8159657.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Night view of illuminated Myanmar pagoda", category: 'traditional' },
-    { src: "https://images.pexels.com/photos/6592450/pexels-photo-6592450.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Traditional oil lamps during festival", category: 'traditional' },
-    { src: "https://images.pexels.com/photos/8180204/pexels-photo-8180204.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Devotees lighting candles at temple", category: 'traditional' },
-    { src: "https://images.pexels.com/photos/6592449/pexels-photo-6592449.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Colorful lanterns hanging in temple", category: 'traditional' },
-    { src: "https://images.pexels.com/photos/8180181/pexels-photo-8180181.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Buddhist monks in candlelight ceremony", category: 'traditional' },
-    { src: "https://images.pexels.com/photos/9978464/pexels-photo-9978464.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Festival celebration with traditional decorations", category: 'traditional' },
-    { src: "https://images.pexels.com/photos/5905713/pexels-photo-5905713.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Students preparing for Thadingyut celebration", category: 'school', year: '2024' },
-    { src: "https://images.pexels.com/photos/8434791/pexels-photo-8434791.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "School lantern making workshop", category: 'school', year: '2024' },
+    { src: "/photos/lightningCeremonies.jpg", alt: "Golden pagoda illuminated with thousands of candles", category: 'traditional' },
+    { src: "/photos/weavingCompetitions.jpg", alt: "Buddhist temple with traditional lanterns", category: 'traditional' },
+    { src: "/photos/nightView.jpg", alt: "Night view of illuminated Myanmar pagoda", category: 'traditional' },
+    { src: "/photos/traditionalOilLamps.jpg", alt: "Traditional oil lamps during festival", category: 'traditional' },
+    { src: "/photos/meritMaking.jpg", alt: "Devotees lighting candles at temple", category: 'traditional' },
+    { src: "/photos/pagodaVisits.jpg", alt: "Colorful lanterns hanging in temple", category: 'traditional' },
+    { src: "/photos/lightningCeremonies.jpg", alt: "Buddhist monks in candlelight ceremony", category: 'traditional' },
+    { src: "/photos/traditionalDecorations.jpg", alt: "Festival celebration with traditional decorations", category: 'traditional' },
+    { src: "/photos/comingSoon.jpg", alt: "Students preparing for Thadingyut celebration", category: 'school', year: '2025' },
+    { src: "/photos/comingSoon.jpg", alt: "School lantern making workshop", category: 'school', year: '2025' },
   ];
 
   const filteredImages = images.filter(img => 

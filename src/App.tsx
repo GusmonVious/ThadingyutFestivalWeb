@@ -55,7 +55,7 @@ function App() {
       icon: "🕯️",
       gradient: "from-amber-500 to-yellow-600",
       image: "/photos/lightningCeremonies.jpg",
-      detailedContent: "The lighting ceremony is the most iconic aspect of Thadingyut, where millions of oil lamps, candles, and modern LED lights illuminate Myanmar from dusk till dawn. This practice dates back over 2,500 years and represents the Buddha's divine light piercing through the darkness of ignorance and suffering.",
+      detailedContent: "The lighting ceremony is the most iconic aspect of Thadingyut, where millions of oil lamps, candles, and LED lights illuminate Myanmar from dusk till dawn. This tradition dates back over 2,500 years and represents the Buddha's divine light piercing through the darkness of ignorance and suffering.",
       culturalSignificance: "Each flame represents a prayer, a wish for wisdom, and a commitment to following the Buddhist path. Families gather to light lamps together, creating bonds across generations while honoring their ancestors and seeking blessings for the future.",
       modernPractice: "Today, traditional oil lamps are often supplemented with colorful LED lights, creating spectacular displays that can be seen from space. Communities organize lighting competitions, and social media has become a platform for sharing the beauty of these illuminated celebrations."
     },
@@ -289,7 +289,7 @@ function App() {
             <div className="relative">
               <div className="gallery-image overflow-hidden">
                 <img 
-                  src="https://images.pexels.com/photos/8159657/pexels-photo-8159657.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                  src="/photos/aboutImg.jpg" 
                   alt="Traditional Myanmar pagoda illuminated during Thadingyut festival"
                   className="w-full h-[400px] object-cover"
                 />
@@ -493,7 +493,7 @@ function App() {
       </section>
 
       {/* Audio Player */}
-      <AudioPlayer src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" autoPlay={true} />
+      <AudioPlayer src="/audio/audioTrack.mp3" autoPlay={true} />
 
       {/* References Section */}
       <References />
