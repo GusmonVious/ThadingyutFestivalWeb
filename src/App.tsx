@@ -42,10 +42,10 @@ function App() {
   };
 
   const timelineEvents = [
-    { title: "Day 1", description: "This day is all about preparation and anticipation. Homes, streets, and public buildings throughout Myanmar are decorated with an array of lights, including colorful electric bulbs, candles, and traditional lanterns. ", icon: "🏮" },
-    { title: "Day 2", description: "This is the most significant and spiritually important day of the festival, as it is the exact day the Buddha is believed to have descended from heaven. Additionally more so, because the most cherished tradition is the act of honoring elders.", icon: "🙏" },
-    { title: "Day 3", description: "The festive spirit continues onto the final day, though often with a slightly more relaxed pace. The bright lights and bustling street fairs remain active, creating more opportunities for people to come together and celebrate.", icon: "🎉" },
-    { title: "Final Day", description:"While not an official part of the religious calendar, the large-scale public entertainment, the free shows, music concerts, plays, and especially the street fairs and markets are open on this extended day.", icon: "✨" }
+    { title: "Day 1 - Lighting of Lamps", description: "This day is all about preparation and anticipation. Homes, streets, and public buildings throughout Myanmar are decorated with an array of lights, including colorful electric bulbs, candles, and traditional lanterns. ", icon: "🏮" },
+    { title: "Day 2 - Cultural Performances", description: "This is the most significant and spiritually important day of the festival, as it is the exact day the Buddha is believed to have descended from heaven. Additionally more so, because the most cherished tradition is the act of honoring elders.", icon: "🙏" },
+    { title: "Day 3 - Merit Making", description: "The festive spirit continues onto the final day, though often with a slightly more relaxed pace. The bright lights and bustling street fairs remain active, creating more opportunities for people to come together and celebrate.", icon: "🎉" },
+    { title: "Final Day - Grand Celebration", description:"While not an official part of the religious calendar, the large-scale public entertainment, the free shows, music concerts, plays, and especially the street fairs and markets are open on this extended day.", icon: "✨" }
   ];
 
   const traditions = [
@@ -65,8 +65,8 @@ function App() {
       icon: "🧵",
       gradient: "from-yellow-500 to-amber-600",
       image: "/photos/weavingCompetitions.jpg",
-      detailedContent: "The Kathina robe weaving ceremony is a sacred tradition where communities come together to create robes for Buddhist monks. This practice requires incredible skill, patience, and devotion, as the entire process from cotton to finished robe must be completed within a single day.",
-      culturalSignificance: "Offering robes to monks is considered one of the highest forms of merit-making in Buddhism. The act of weaving together symbolizes community unity and shared spiritual purpose, while the finished robes provide essential clothing for monks during their spiritual practice.",
+      detailedContent: "The Kathina robe weaving ceremony is a sacred tradition for communities to come together to create robes for Buddhist monks. This practice requires incredible skill, patience, and devotion, as the entire process from cotton to finished robe must be completed within a single day.",
+      culturalSignificance: "Offering robes to monks is considered one of the highest forms of merit-making in Buddhism. The act of weaving together symbolizes community unity and shared spiritual purpose, while the finished robes provide clothing for monks during their spiritual practice.",
       modernPractice: "While traditional hand-weaving continues, modern communities often organize large-scale weaving events with hundreds of participants. These gatherings have become cultural festivals in themselves, featuring traditional music, food, and storytelling alongside the sacred weaving."
     },
     {
@@ -75,9 +75,9 @@ function App() {
       icon: "🙏",
       gradient: "from-amber-600 to-orange-600",
       image: "/photos/meritMaking.jpg",
-      detailedContent: "Merit making during Thadingyut involves various acts of generosity and kindness, from offering food to monks and donations to temples, to helping the elderly and caring for animals. These actions are believed to generate positive karma and spiritual merit.",
+      detailedContent: "Merit making during Thadingyut involves various acts of generosity and kindness, ranging from offering food to monks and donations to temples, to helping the elderly and caring for animals. These actions are genuinely believed to generate positive karma and spiritual merit.",
       culturalSignificance: "The concept of merit (Punya) is central to Buddhist philosophy, representing the positive energy created through good deeds. During Thadingyut, the merit gained is believed to be multiplied, making it an especially auspicious time for charitable acts and spiritual practice.",
-      modernPractice: "Contemporary merit making includes organized charity drives, blood donations, environmental cleanup projects, and digital fundraising for community causes. Social media platforms help coordinate large-scale merit making activities across the country."
+      modernPractice: "Till now, merit making includes organized charity events, blood donations, digital fundraising, and even  environmental cleanups. Additionally, social media platforms help coordinate such large-scale merit making activities across the country."
     },
     {
       title: "Cultural Performances",
@@ -85,9 +85,9 @@ function App() {
       icon: "🎭",
       gradient: "from-yellow-600 to-amber-500",
       image: "/photos/culturalPerformances.jpg",
-      detailedContent: "Thadingyut celebrations feature elaborate cultural performances including traditional Burmese dance, music, and theatrical presentations. These performances often depict stories from Buddhist Jataka tales and Myanmar's rich cultural heritage.",
-      culturalSignificance: "Cultural performances serve as living libraries, preserving ancient stories, moral teachings, and artistic traditions. They educate younger generations about their heritage while providing entertainment that strengthens community bonds and cultural identity.",
-      modernPractice: "Modern Thadingyut performances blend traditional elements with contemporary staging, lighting, and sound systems. Many performances are now broadcast live on television and social media, reaching global Myanmar communities and preserving these traditions digitally."
+      detailedContent: "Thadingyut celebrations feature elaborate cultural performances including traditional Burmese dance, music, and theatrical presentations. These performances mostly depict stories from Buddhist Jataka tales and Myanmar's cultural heritage.",
+      culturalSignificance: "Cultural performances serve as living libraries, preserving ancient stories, moral teachings, and artistic traditions. They educate younger generations about their heritage while providing entertainment that strengthens cultural identity.",
+      modernPractice: "Modern Thadingyut performances usually blend the traditional elements with contemporary staging, lighting, and sound systems. Many performances actually are now broadcast live on television and social media, reaching global Myanmar communities and preserving these traditions digitally."
     },
     {
       title: "Pagoda Visits",
@@ -95,9 +95,9 @@ function App() {
       icon: "🏛️",
       gradient: "from-amber-500 to-yellow-500",
       image: "/photos/pagodaVisits.jpg",
-      detailedContent: "Pagoda visits during Thadingyut are spiritual pilgrimages where devotees travel to sacred Buddhist sites to pay respects, make offerings, and engage in meditation. The most popular destinations include Shwedagon Pagoda, Sule Pagoda, and other historically significant temples.",
-      culturalSignificance: "Pagodas are considered the most sacred spaces in Buddhism, housing relics of the Buddha and serving as focal points for spiritual practice. Visiting pagodas during Thadingyut is believed to bring special blessings and spiritual purification.",
-      modernPractice: "Modern pagoda visits often involve organized group pilgrimages, with transportation arranged by communities. Many pagodas now offer digital donation systems and live-streamed ceremonies for those unable to visit in person, especially during the COVID-19 pandemic."
+      detailedContent: "Pagoda visits during Thadingyut are very spiritual pilgrimages where devotees will travel to sacred Buddhist sites to pay respects, make offerings, and engage in meditation. The most popular destinations include Shwedagon Pagoda, Sule Pagoda, and other historically significant temples.",
+      culturalSignificance: "Pagodas are considered the most sacred spaces in Buddhism, housing relics of the Buddha and serving as focal points for spiritual practice.",
+      modernPractice: ""
     },
     {
       title: "Family Gatherings",
@@ -105,9 +105,9 @@ function App() {
       icon: "👨‍👩‍👧‍👦",
       gradient: "from-orange-500 to-amber-600",
       image: "/photos/familyGathering.jpg",
-      detailedContent: "Family gatherings during Thadingyut are heartwarming reunions where extended families come together to celebrate, share traditional foods, and pass down cultural knowledge. These gatherings often span multiple days and include elaborate feasts featuring traditional Myanmar cuisine.",
-      culturalSignificance: "Family unity is a cornerstone of Myanmar culture, and Thadingyut provides an opportunity to strengthen these bonds. Elders share stories and wisdom with younger generations, ensuring cultural continuity and family traditions are preserved.",
-      modernPractice: "Modern family gatherings often incorporate video calls for overseas relatives, social media sharing of family moments, and fusion of traditional foods with contemporary cooking methods. Despite modernization, the core values of respect, gratitude, and family unity remain unchanged."
+      detailedContent: "Family gatherings during Thadingyut are heartwarming reunions where families come together to celebrate, share traditional foods, and pass down cultural knowledge. These gatherings often span multiple days and include elaborate feasts featuring traditional Myanmar cuisine.",
+      culturalSignificance: "Family unity is a cornerstone of Myanmar culture since ancient times, and Thadingyut provides an opportunity to strengthen such bonds. Elders share stories and wisdom with younger generations, essentially making cultural continuity and family traditions preserved.",
+      modernPractice: ""
     }
   ];
 
