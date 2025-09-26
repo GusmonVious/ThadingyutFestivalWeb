@@ -111,6 +111,7 @@ function App() {
     }
   ];
 
+
   const openTraditionModal = (tradition: any) => {
     setSelectedTradition(tradition);
     setIsModalOpen(true);
@@ -127,22 +128,22 @@ function App() {
       <nav className={`fixed w-full z-50 transition-all duration-500 ${
         scrollY > 100 ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg shadow-amber-500/10' : 'bg-transparent'
       }`}>
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center gap-3">
-              <img src="/logo.png" alt="Logo" className='w-auto h-6'/>
-              |
-              <div className="text-2xl font-bold font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <img src="/logo.png" alt="Logo" className='w-auto h-5 sm:h-6'/>
+              <span className="text-amber-400 text-sm sm:text-base">|</span>
+              <div className="text-xl sm:text-2xl font-bold font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
                 Thadingyut
               </div>
             </div>
             
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex space-x-6 lg:space-x-8">
               {['Home', 'About', 'Timeline', 'Traditions', 'Gallery', 'Events'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-white hover:text-amber-400 transition-all duration-300 relative group font-medium focus-visible:focus"
+                  className="text-white hover:text-amber-400 transition-all duration-300 relative group font-medium focus-visible:focus text-sm lg:text-base"
                 >
                   {item}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
@@ -151,23 +152,23 @@ function App() {
             </div>
 
             <button 
-              className="md:hidden text-white focus-visible:focus"
+              className="md:hidden text-white focus-visible:focus p-1"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
 
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-sm border-t border-amber-500/20">
-              <div className="flex flex-col space-y-4 px-6 py-6">
+              <div className="flex flex-col space-y-3 px-4 py-4">
                 {['Home', 'About', 'Timeline', 'Traditions', 'Gallery', 'Events'].map((item) => (
                   <button
                     key={item}
                     onClick={() => scrollToSection(item.toLowerCase())}
-                    className="text-white hover:text-amber-400 transition-colors duration-300 text-left font-medium focus-visible:focus"
+                    className="text-white hover:text-amber-400 transition-colors duration-300 text-left font-medium focus-visible:focus py-2"
                   >
                     {item}
                   </button>
@@ -203,42 +204,42 @@ function App() {
 
         <div className="hero-particles absolute inset-0 z-10"></div>
 
-        <div className="relative z-20 text-center px-6 max-w-5xl mx-auto">
+        <div className="relative z-20 text-center px-4 sm:px-6 max-w-5xl mx-auto">
           <div className="animate-fade-in">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 font-playfair bg-gradient-to-r from-amber-300 via-yellow-500 to-amber-600 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 font-playfair bg-gradient-to-r from-amber-300 via-yellow-500 to-amber-600 bg-clip-text text-transparent leading-tight">
               Thadingyut
             </h1>
-            <p className="text-2xl md:text-3xl text-amber-200 mb-4 font-great-vibes">
+            <p className="text-xl sm:text-2xl md:text-3xl text-amber-200 mb-3 sm:mb-4 font-great-vibes">
               Festival of Lights
             </p>
-            <p className="text-lg text-amber-100 mb-12 font-medium tracking-wide">
+            <p className="text-base sm:text-lg text-amber-100 mb-8 sm:mb-12 font-medium tracking-wide">
               မီးထွန်းပွဲတော် • The Sacred Illumination
             </p>
-            <p className="text-lg text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-8 sm:mb-12 leading-relaxed max-w-3xl mx-auto px-2">
               Celebrating Buddha's descent from Tavatimsa Heaven, illuminating hearts and homes across Myanmar with the divine light of wisdom, compassion, and eternal peace.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center animate-slide-up px-2">
             <button 
               onClick={() => scrollToSection('about')}
-              className="px-10 py-4 bg-gradient-to-r from-amber-600 to-yellow-600 text-white rounded-full hover:from-amber-500 hover:to-yellow-500 transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 font-semibold text-lg golden-glow focus-visible:focus"
+              className="px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-amber-600 to-yellow-600 text-white rounded-full hover:from-amber-500 hover:to-yellow-500 transition-all duration-300 shadow-lg shadow-amber-500/30 hover:shadow-amber-500/50 font-semibold text-sm sm:text-base lg:text-lg golden-glow focus-visible:focus"
             >
-              <Sparkles className="inline mr-2" size={20} />
+              <Sparkles className="inline mr-2" size={16} />
               Discover the Festival
             </button>
             <button 
               onClick={() => scrollToSection('events')}
-              className="px-10 py-4 border-2 border-amber-500 text-amber-400 rounded-full hover:bg-amber-500 hover:text-white transition-all duration-300 font-semibold text-lg focus-visible:focus"
+              className="px-6 sm:px-10 py-3 sm:py-4 border-2 border-amber-500 text-amber-400 rounded-full hover:bg-amber-500 hover:text-white transition-all duration-300 font-semibold text-sm sm:text-base lg:text-lg focus-visible:focus"
             >
-              <Heart className="inline mr-2" size={20} />
+              <Heart className="inline mr-2" size={16} />
               Join Celebrations
             </button>
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
-          <ChevronDown className="text-amber-400" size={32} />
+        <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+          <ChevronDown className="text-amber-400" size={24} />
         </div>
       </section>
 
@@ -248,39 +249,39 @@ function App() {
       </div>
 
       {/* About Section */}
-      <section id="about" className="py-16 px-6">
+      <section id="about" className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
+          <div className="text-center mb-12 sm:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
               The Sacred Journey
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed px-2">
               Thadingyut marks the end of Buddhist Lent and celebrates the Buddha's return from the celestial realm after teaching the Abhidhamma to his mother, Queen Maya, illuminating the path to enlightenment.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-8 card-hover golden-glow">
-                <div className="flex items-center mb-6">
-                  <div className="w-10 h-10 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-full flex items-center justify-center mr-3">
-                    <Lightbulb className="text-white" size={20} />
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div className="space-y-6 sm:space-y-8">
+              <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-6 sm:p-8 card-hover golden-glow">
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-full flex items-center justify-center mr-3">
+                    <Lightbulb className="text-white" size={16} />
                   </div>
-                  <h3 className="text-xl font-semibold text-white font-playfair">Festival of Lights</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white font-playfair">Festival of Lights</h3>
                 </div>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                   For three scared days, Myanmar turns into a constellation of light. Millions of candles, oil lamps, and colorful lanterns light up a breathtaking celestial display to honor Buddha's divine wisdom and eternal teachings.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-8 card-hover golden-glow">
-                <div className="flex items-center mb-6">
-                  <div className="w-10 h-10 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-full flex items-center justify-center mr-3">
-                    <Calendar className="text-white" size={20} />
+              <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-6 sm:p-8 card-hover golden-glow">
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-full flex items-center justify-center mr-3">
+                    <Calendar className="text-white" size={16} />
                   </div>
-                  <h3 className="text-xl font-semibold text-white font-playfair">Sacred Timing</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white font-playfair">Sacred Timing</h3>
                 </div>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                   Celebrated on the full moon day of Thadingyut (usually October), this auspicious time marks the end of the three-month Buddhist retreat season and the beginning of the cool season, also symbolizing spiritual renewal.
                 </p>
               </div>
@@ -291,29 +292,45 @@ function App() {
                 <img 
                   src="/photos/aboutImg.jpg" 
                   alt="Traditional Myanmar pagoda illuminated during Thadingyut festival"
-                  className="w-full h-[400px] object-cover"
+                  className="w-full h-[300px] sm:h-[400px] object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-full opacity-20 animate-pulse-gold"></div>
-              <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-r from-yellow-500 to-amber-600 rounded-full opacity-30 animate-pulse-gold" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute -bottom-2 sm:-bottom-4 -right-2 sm:-right-4 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-full opacity-20 animate-pulse-gold"></div>
+              <div className="absolute -top-2 sm:-top-4 -left-2 sm:-left-4 w-12 sm:w-20 h-12 sm:h-20 bg-gradient-to-r from-yellow-500 to-amber-600 rounded-full opacity-30 animate-pulse-gold" style={{ animationDelay: '1s' }}></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Timeline Section */}
-      <section id="timeline" className="py-16 px-6 bg-slate-900/30">
+      <section id="timeline" className="py-12 sm:py-16 px-4 sm:px-6 bg-slate-900/30">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
+          <div className="text-center mb-12 sm:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
               Festival Timeline
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed px-2">
               Experience the sacred progression of Thadingyut through four illuminating days of celebration.
             </p>
           </div>
 
-          <div className="relative">
+          {/* Mobile Timeline */}
+          <div className="block md:hidden space-y-8">
+            {timelineEvents.map((event, index) => (
+              <div key={index} className="relative">
+                <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-6 card-hover">
+                  <div className="flex items-center mb-4">
+                    <div className="text-2xl mr-3">{event.icon}</div>
+                    <h3 className="text-lg font-semibold text-white font-playfair">{event.title}</h3>
+                  </div>
+                  <p className="text-gray-300 text-sm leading-relaxed">{event.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop Timeline */}
+          <div className="hidden md:block relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-amber-500 to-yellow-600 opacity-30"></div>
             
             <div className="space-y-16">
@@ -342,18 +359,18 @@ function App() {
       </div>
 
       {/* Traditions Section */}
-      <section id="traditions" className="py-16 px-6">
+      <section id="traditions" className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
+          <div className="text-center mb-12 sm:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
               Sacred Traditions
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed px-2">
               Ancient customs that connect generations in reverence, joy, and spiritual awakening, preserving the essence of Buddhist wisdom.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {traditions.map((tradition, index) => (
               <div 
                 key={index}
@@ -371,15 +388,15 @@ function App() {
                 </div>
                 
                 {/* Content */}
-                <div className="relative z-10 p-8">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${tradition.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                    <span className="text-xl">{tradition.icon}</span>
+                <div className="relative z-10 p-6 sm:p-8">
+                  <div className={`w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-r ${tradition.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <span className="text-lg sm:text-xl">{tradition.icon}</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-3 font-playfair group-hover:text-amber-300 transition-colors duration-300">{tradition.title}</h3>
-                  <p className="text-gray-300 leading-relaxed text-sm group-hover:text-gray-200 transition-colors duration-300">{tradition.description}</p>
+                  <h3 className="text-base sm:text-lg font-semibold text-white mb-3 font-playfair group-hover:text-amber-300 transition-colors duration-300">{tradition.title}</h3>
+                  <p className="text-gray-300 leading-relaxed text-xs sm:text-sm group-hover:text-gray-200 transition-colors duration-300">{tradition.description}</p>
                   
                   {/* Click indicator */}
-                  <div className="mt-4 text-xs text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium">
+                  <div className="mt-3 sm:mt-4 text-xs text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium">
                     Click to learn more →
                   </div>
                 </div>
@@ -397,13 +414,13 @@ function App() {
       />
 
       {/* Gallery Section */}
-      <section id="gallery" className="py-16 px-6 bg-slate-900/30">
+      <section id="gallery" className="py-12 sm:py-16 px-4 sm:px-6 bg-slate-900/30">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
+          <div className="text-center mb-12 sm:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
               Luminous Moments
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed px-2">
               Witness the enchanting beauty of Thadingyut celebrations, including our upcoming school festivities.
             </p>
           </div>
@@ -413,52 +430,52 @@ function App() {
       </section>
 
       {/* Events Section */}
-      <section id="events" className="py-16 px-6">
+      <section id="events" className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
+          <div className="text-center mb-12 sm:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent">
               School & Community Events
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed px-2">
               Join our school and community celebrations of this sacred festival of light, wisdom, and spiritual awakening.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-8 card-hover golden-glow">
-              <div className="flex items-center mb-8">
-                <div className="w-10 h-10 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-full flex items-center justify-center mr-3">
-                  <Users className="text-white" size={20} />
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
+            <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-6 sm:p-8 card-hover golden-glow">
+              <div className="flex items-center mb-6 sm:mb-8">
+                <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-full flex items-center justify-center mr-3">
+                  <Users className="text-white" size={16} />
                 </div>
-                <h3 className="text-2xl font-semibold text-white font-playfair">School Events</h3>
+                <h3 className="text-xl sm:text-2xl font-semibold text-white font-playfair">School Events</h3>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {[
                   { title: "School Lighting Ceremony", date: "Coming Soon • ---- PM", location: "School Auditorium", icon: "🏮" },
                   { title: "Student Cultural Show", date: "Coming Soon • ---- PM", location: "Main Hall", icon: "🎭" },
                   { title: "Lantern Making Workshop", date: "Coming Soon • ---- PM", location: "Art Room", icon: "🎨" },
                   { title: "Merit Making Activity", date: "Coming Soon • ---- AM", location: "School Grounds", icon: "🙏" }
                 ].map((event, index) => (
-                  <div key={index} className="flex items-center p-4 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors duration-300">
-                    <div className="text-2xl mr-3">{event.icon}</div>
-                    <div className="flex-1">
-                      <h4 className="text-white font-semibold mb-1">{event.title}</h4>
-                      <p className="text-gray-400 text-sm mb-1">{event.date}</p>
-                      <p className="text-amber-400 text-sm font-medium">{event.location}</p>
+                  <div key={index} className="flex items-center p-3 sm:p-4 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors duration-300">
+                    <div className="text-xl sm:text-2xl mr-3">{event.icon}</div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-white font-semibold mb-1 text-sm sm:text-base truncate">{event.title}</h4>
+                      <p className="text-gray-400 text-xs sm:text-sm mb-1">{event.date}</p>
+                      <p className="text-amber-400 text-xs sm:text-sm font-medium">{event.location}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-8 card-hover golden-glow">
-              <div className="flex items-center mb-8">
-                <div className="w-10 h-10 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-full flex items-center justify-center mr-3">
-                  <MapPin className="text-white" size={20} />
+            <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-6 sm:p-8 card-hover golden-glow">
+              <div className="flex items-center mb-6 sm:mb-8">
+                <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-full flex items-center justify-center mr-3">
+                  <MapPin className="text-white" size={16} />
                 </div>
-                <h3 className="text-2xl font-semibold text-white font-playfair">Sacred Locations</h3>
+                <h3 className="text-xl sm:text-2xl font-semibold text-white font-playfair">Sacred Locations</h3>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {[
                   { 
                     title: "Shwedagon Pagoda", 
@@ -476,12 +493,12 @@ function App() {
                     icon: "🏔️"
                   }
                 ].map((location, index) => (
-                  <div key={index} className="p-4 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors duration-300">
+                  <div key={index} className="p-3 sm:p-4 bg-slate-800/50 rounded-xl hover:bg-slate-700/50 transition-colors duration-300">
                     <div className="flex items-start">
-                      <div className="text-xl mr-3 mt-1">{location.icon}</div>
-                      <div>
-                        <h4 className="text-white font-semibold mb-1">{location.title}</h4>
-                        <p className="text-gray-400 text-sm leading-relaxed">{location.description}</p>
+                      <div className="text-lg sm:text-xl mr-3 mt-1 flex-shrink-0">{location.icon}</div>
+                      <div className="min-w-0">
+                        <h4 className="text-white font-semibold mb-1 text-sm sm:text-base">{location.title}</h4>
+                        <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{location.description}</p>
                       </div>
                     </div>
                   </div>
@@ -499,36 +516,39 @@ function App() {
       <References />
 
       {/* Footer */}
-      <footer className="py-16 px-6 border-t border-amber-500/20 bg-slate-900/50">
+      <footer className="py-12 sm:py-16 px-4 sm:px-6 border-t border-amber-500/20 bg-slate-900/50">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent mb-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-3xl sm:text-4xl font-bold font-playfair bg-gradient-to-r from-amber-400 to-yellow-600 bg-clip-text text-transparent mb-4 sm:mb-6">
               Thadingyut
             </h3>
-            <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed mb-8">
+            <p className="text-gray-400 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 px-2">
               May the divine light of wisdom illuminate your path and bring peace, joy, and prosperity to you and your loved ones. 
               Let the sacred flames of Thadingyut guide us all toward enlightenment and eternal happiness.
             </p>
           </div>
           
-          <div className="flex justify-center space-x-8 mb-8">
-            <Star className="text-amber-500 animate-pulse" size={24} />
-            <Lightbulb className="text-yellow-500 animate-pulse" size={24} />
-            <Heart className="text-amber-400 animate-pulse" size={24} />
+          <div className="flex justify-center space-x-6 sm:space-x-8 mb-6 sm:mb-8">
+            <Star className="text-amber-500 animate-pulse" size={20} />
+            <Lightbulb className="text-yellow-500 animate-pulse" size={20} />
+            <Heart className="text-amber-400 animate-pulse" size={20} />
           </div>
           
           {/* Creator Info */}
-          <div className="border-t border-amber-500/20 pt-8 space-y-6">
+          <div className="border-t border-amber-500/20 pt-6 sm:pt-8 space-y-4 sm:space-y-6">
             <div className="text-center">
-              <h4 className="text-lg font-semibold text-amber-400 mb-3 font-playfair">Created With Dedication</h4>
-              <p className="text-gray-300 mb-4">
+              <h4 className="text-base sm:text-lg font-semibold text-amber-400 mb-2 sm:mb-3 font-playfair">Created With Dedication</h4>
+              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base px-2">
                 This website was crafted by <span className="text-amber-400 font-semibold">Year 9 students from EDUSN</span> to honor and celebrate the sacred traditions of Thadingyut Festival.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-400">
-                <div className="flex items-center space-x-2">
+              <div className="flex flex-col space-y-2 justify-center items-center text-xs sm:text-sm text-gray-400 px-2">
+                <div className="flex items-center space-x-2 flex-wrap justify-center">
                   <span>📧</span>
-                  <span>Contact: kaunghtutsan@edusnschool.co.uk</span>
-                  <span>/ sittlwinhtoo@edusnschool.co.uk</span>
+                  <span className="break-all">Contact: kaunghtutsan@edusnschool.co.uk</span>
+                  <span className="hidden sm:inline">/</span>
+                </div>
+                <div className="flex items-center space-x-2 flex-wrap justify-center">
+                  <span className="break-all">sittlwinhtoo@edusnschool.co.uk</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <span>🏫</span>
@@ -537,8 +557,8 @@ function App() {
               </div>
             </div>
             
-            <div className="text-center pt-4 border-t border-amber-500/10">
-              <p className="text-gray-500 text-sm">
+            <div className="text-center pt-3 sm:pt-4 border-t border-amber-500/10">
+              <p className="text-gray-500 text-xs sm:text-sm px-2">
                 © 2025 School Thadingyut Celebration • Honoring Myanmar's Sacred Festival of Lights
               </p>
             </div>

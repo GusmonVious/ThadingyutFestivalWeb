@@ -34,7 +34,7 @@ export const Gallery: React.FC = () => {
   return (
     <div className="space-y-8">
       {/* Category Filter */}
-      <div className="flex justify-center space-x-4">
+      <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
         {[
           { key: 'all', label: 'All Photos', icon: Camera },
           { key: 'traditional', label: 'Traditional', icon: Calendar },
@@ -43,37 +43,37 @@ export const Gallery: React.FC = () => {
           <button
             key={key}
             onClick={() => setActiveCategory(key as any)}
-            className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 focus-visible:focus ${
+            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 focus-visible:focus text-sm sm:text-base ${
               activeCategory === key
                 ? 'bg-gradient-to-r from-amber-500 to-yellow-600 text-white shadow-lg shadow-amber-500/30'
                 : 'bg-slate-800/60 text-gray-300 hover:bg-slate-700/60 hover:text-amber-400'
             }`}
           >
-            <Icon size={16} />
+            <Icon size={14} />
             <span>{label}</span>
           </button>
         ))}
       </div>
 
       {/* Gallery Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
         {displayedImages.map((image, index) => (
           <div key={index} className="gallery-image group cursor-pointer relative overflow-hidden">
             <img 
               src={image.src}
               alt={image.alt}
-              className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-32 sm:h-40 lg:h-48 object-cover transition-transform duration-500 group-hover:scale-110"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             
             {image.category === 'school' && (
-              <div className="absolute top-3 right-3 bg-amber-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+              <div className="absolute top-2 sm:top-3 right-2 sm:right-3 bg-amber-500 text-white text-xs px-2 py-1 rounded-full font-medium">
                 {image.year}
               </div>
             )}
             
-            <div className="absolute bottom-3 left-3 right-3 text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 right-2 sm:right-3 text-white text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <p className="font-medium truncate">{image.alt}</p>
             </div>
           </div>
@@ -85,20 +85,20 @@ export const Gallery: React.FC = () => {
         <div className="text-center">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="px-8 py-3 bg-gradient-to-r from-amber-600 to-yellow-600 text-white rounded-full hover:from-amber-500 hover:to-yellow-500 transition-all duration-300 shadow-lg shadow-amber-500/30 font-medium flex items-center space-x-2 mx-auto focus-visible:focus"
+            className="px-6 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-amber-600 to-yellow-600 text-white rounded-full hover:from-amber-500 hover:to-yellow-500 transition-all duration-300 shadow-lg shadow-amber-500/30 font-medium flex items-center space-x-2 mx-auto focus-visible:focus text-sm sm:text-base"
           >
             <span>{showAll ? 'Show Less' : `See All ${filteredImages.length} Photos`}</span>
-            <ChevronRight size={16} className={`transition-transform duration-300 ${showAll ? 'rotate-90' : ''}`} />
+            <ChevronRight size={14} className={`transition-transform duration-300 ${showAll ? 'rotate-90' : ''}`} />
           </button>
         </div>
       )}
 
       {/* School Celebration Notice */}
       {activeCategory === 'school' && (
-        <div className="bg-gradient-to-r from-amber-500/10 to-yellow-500/10 border border-amber-500/30 rounded-2xl p-6 text-center">
-          <div className="text-2xl mb-3">🏫</div>
-          <h3 className="text-xl font-semibold text-amber-400 mb-2 font-playfair">School Celebration Coming Soon!</h3>
-          <p className="text-gray-300">
+        <div className="bg-gradient-to-r from-amber-500/10 to-yellow-500/10 border border-amber-500/30 rounded-2xl p-4 sm:p-6 text-center">
+          <div className="text-xl sm:text-2xl mb-2 sm:mb-3">🏫</div>
+          <h3 className="text-lg sm:text-xl font-semibold text-amber-400 mb-2 font-playfair">School Celebration Coming Soon!</h3>
+          <p className="text-gray-300 text-sm sm:text-base">
             Our school's Thadingyut celebration is happening soon. Photos from the event will be added here to showcase our students' participation in this sacred festival.
           </p>
         </div>
